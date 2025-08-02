@@ -1,0 +1,42 @@
+·····················································································································································
+ gheruha@Pro  ~/Documents/LocalDocs/kitty   testing ±  cd kittens 
+·····················································································································································
+ gheruha@Pro  ~/Documents/LocalDocs/kitty/kittens   testing ±  ls -la
+total 16
+-rw-r--r--   1 gheruha  staff     0 Jul 18 13:12 __init__.py
+drwxr-xr-x   4 gheruha  staff   128 Jul 19 10:36 __pycache__
+drwxr-xr-x  30 gheruha  staff   960 Aug  1 16:23 .
+drwxr-xr-x@ 55 gheruha  staff  1760 Aug  1 17:56 ..
+drwxr-xr-x   9 gheruha  staff   288 Jul 19 10:36 ask
+drwxr-xr-x   5 gheruha  staff   160 Jul 19 10:36 broadcast
+drwxr-xr-x  17 gheruha  staff   544 Jul 19 10:36 choose_files
+drwxr-xr-x  18 gheruha  staff   576 Jul 19 10:36 choose_fonts
+drwxr-xr-x  10 gheruha  staff   320 Jul 19 10:36 clipboard
+drwxr-xr-x   9 gheruha  staff   288 Jul 19 10:36 desktop_ui
+drwxr-xr-x  17 gheruha  staff   544 Jul 19 10:36 diff
+drwxr-xr-x   5 gheruha  staff   160 Jul 27 11:51 first
+drwxr-xr-x   9 gheruha  staff   288 Jul 19 10:36 hints
+drwxr-xr-x   7 gheruha  staff   224 Jul 19 10:36 hyperlinked_grep
+drwxr-xr-x  12 gheruha  staff   384 Jul 19 10:36 icat
+drwxr-xr-x   7 gheruha  staff   224 Jul 19 10:36 notify
+drwxr-xr-x   8 gheruha  staff   256 Jul 19 10:36 pager
+drwxr-xr-x   7 gheruha  staff   224 Jul 19 10:36 panel
+drwxr-xr-x   7 gheruha  staff   224 Jul 19 10:36 query_terminal
+drwxr-xr-x   8 gheruha  staff   256 Jul 19 10:36 quick_access_terminal
+drwxr-xr-x   5 gheruha  staff   160 Jul 19 10:36 remote_file
+drwxr-xr-x   5 gheruha  staff   160 Jul 19 10:36 resize_window
+-rw-r--r--   1 gheruha  staff  7360 Jul 18 13:12 runner.py
+drwxr-xr-x   4 gheruha  staff   128 Aug  1 17:55 save_terminal_window
+drwxr-xr-x   9 gheruha  staff   288 Jul 19 10:36 show_key
+drwxr-xr-x  16 gheruha  staff   512 Jul 19 10:36 ssh
+drwxr-xr-x   9 gheruha  staff   288 Jul 19 10:36 themes
+drwxr-xr-x  18 gheruha  staff   576 Jul 19 10:36 transfer
+drwxr-xr-x  15 gheruha  staff   480 Jul 19 10:36 tui
+drwxr-xr-x   8 gheruha  staff   256 Jul 19 10:36 unicode_input
+·····················································································································································
+ gheruha@Pro  ~/Documents/LocalDocs/kitty/kittens   testing ±  
+
+
+
+
+
