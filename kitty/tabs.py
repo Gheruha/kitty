@@ -55,7 +55,7 @@ from .tab_bar import TabBar, TabBarData
 from .types import ac
 from .typing_compat import EdgeLiteral, SessionTab, SessionType, TypedDict
 from .utils import cmdline_for_hold, log_error, platform_window_id, resolved_shell, shlex_split, which
-from .window import CwdRequest, Watchers, Window, WindowDict
+from .window import CwdRequest, Watchers, Window, WindowDict, global_watchers
 from .window_list import WindowList
 
 
@@ -272,8 +272,7 @@ class Tab:  # {{{
             'window_list': self.windows.serialize_state(),
             'current_layout': self._current_layout_name,
             'last_used_layout': self._last_used_layout,
-            'layout_opts': self.current_layout.layout_opts,
-            'layout_state': self.current_layout.layout_state,
+            'layout_state': self.current_layout.serialize(),
             'enabled_layouts': self.enabled_layouts,
             'name': self.name,
         }
@@ -1004,9 +1003,22 @@ class TabManager:  # {{{
             self.tab_bar.layout()
             self.resize(only_tabs=True)
 
+    @property
+    def any_window(self) -> Window | None:
+        for t in self:
+            for w in t:
+                return w
+        return None
+
     def mark_tab_bar_dirty(self) -> None:
         if self.tab_bar_should_be_visible and not self.tab_bar_hidden:
             mark_tab_bar_dirty(self.os_window_id)
+        w = self.active_window or self.any_window
+        if w is not None:
+            data = {'tab_manager': self}
+            boss = get_boss()
+            for watcher in global_watchers().on_tab_bar_dirty:
+                watcher(boss, w, data)
 
     def update_tab_bar_data(self) -> None:
         self.tab_bar.update(self.tab_bar_data)
